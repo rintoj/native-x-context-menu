@@ -1,9 +1,9 @@
 {
-  "name": "native-x-text",
+  "name": "native-x-context-menu",
   "version": "0.0.0-development",
-  "description": "Text component that works with native-x-theme",
+  "description": "Context menu component",
   "main": "lib/index.js",
-  "repository": "https://github.com/rintoj/native-x-text.git",
+  "repository": "https://github.com/rintoj/native-x-context-menu.git",
   "author": "Rinto Jose <rintoj@gmail.com>",
   "license": "MIT",
   "private": false,
