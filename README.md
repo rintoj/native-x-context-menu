@@ -21,24 +21,33 @@ npm install native-x-context-menu
 ## Usage
 
 ```tsx
-import { ContextMenu, ContextMenuItem, ContextMenuSeparator } from 'native-x-context-menu'
+import {
+  ContextMenu,
+  ContextMenuItem,
+  ContextMenuProvider,
+  ContextMenuSeparator,
+} from 'native-x-context-menu'
+import { CheckmarkIcon, CloseIcon, CopyOutlineIcon, TrashOutlineIcon } from 'native-x-icon'
 
 function MyComponent() {
   return (
-    <ContextMenu>
-      <ContextMenuItem icon={CheckmarkIcon}>Approve</ContextMenuItem>
-      <ContextMenuItem icon={CloseIcon} onPress={() => Alert.alert('Reject')}>
-        Reject
-      </ContextMenuItem>
-      <ContextMenuSeparator />
-      <ContextMenuItem icon={CopyOutlineIcon} disabled>
-        Copy Link
-      </ContextMenuItem>
-      <ContextMenuSeparator />
-      <ContextMenuItem textColor={COLOR.ERROR} icon={TrashOutlineIcon}>
-        Delete
-      </ContextMenuItem>
-    </ContextMenu>
+    <ContextMenuProvider>
+      ...
+      <ContextMenu>
+        <ContextMenuItem icon={CheckmarkIcon}>Approve</ContextMenuItem>
+        <ContextMenuItem icon={CloseIcon} onPress={() => Alert.alert('Reject')}>
+          Reject
+        </ContextMenuItem>
+        <ContextMenuSeparator />
+        <ContextMenuItem icon={CopyOutlineIcon} disabled>
+          Copy Link
+        </ContextMenuItem>
+        <ContextMenuSeparator />
+        <ContextMenuItem textColor={COLOR.ERROR} icon={TrashOutlineIcon}>
+          Delete
+        </ContextMenuItem>
+      </ContextMenu>
+    </ContextMenuProvider>
   )
 }
 ```
