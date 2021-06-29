@@ -54,15 +54,15 @@ function MyComponent() {
 
 ## API ContextMenuItem
 
-| Property                  | Default Value   | Usage                                                                 |
-| ------------------------- | --------------- | --------------------------------------------------------------------- |
-| children: string          |                 | Menu text                                                             |
-| icon?: () => ReactElement |                 | Icon. Eg: icon={CloseIcon}                                            |
-| disabled?: boolean        |                 | Disabled if true                                                      |
-| backgroundColor?: string  | COLOR.PRIMARY   | Background color                                                      |
-| textColor?: string        | COLOR.SECONDARY | Text color for ContextMenuItem - overrides textColor from ContextMenu |
-| iconColor?: string        | COLOR.TERTIARY  | Text color for ContextMenuItem - overrides iconColor from ContextMenu |
-| onPress?: () => void      |                 | Callback handler for onPress                                          |
+| Property                 | Default Value   | Usage                                                                 |
+| ------------------------ | --------------- | --------------------------------------------------------------------- |
+| children: string         |                 | Menu text                                                             |
+| icon?: ReactElement      |                 | Icon. Eg: icon={<CloseIcon />}                                        |
+| disabled?: boolean       |                 | Disabled if true                                                      |
+| backgroundColor?: string | COLOR.PRIMARY   | Background color                                                      |
+| textColor?: string       | COLOR.SECONDARY | Text color for ContextMenuItem - overrides textColor from ContextMenu |
+| iconColor?: string       | COLOR.TERTIARY  | Text color for ContextMenuItem - overrides iconColor from ContextMenu |
+| onPress?: () => void     |                 | Callback handler for onPress                                          |
 
 ## Automatic Release
 

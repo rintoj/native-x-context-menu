@@ -9,7 +9,7 @@ import { MenuOption } from 'react-native-popup-menu'
 interface Props {
   children: string
   disabled?: boolean
-  icon?: (props: { color?: string }) => React.ReactElement
+  icon?: React.ReactElement
   onPress?: () => void
   backgroundColor?: string
   textColor?: string
@@ -36,7 +36,6 @@ export function ContextMenuItem({
   onPress,
   ...props
 }: Props) {
-  const Icon = icon
   const { containerColors }: ContextMenuItemPropsExtended = props as any
   const contentColor = disabled
     ? COLOR.TERTIARY
@@ -58,7 +57,7 @@ export function ContextMenuItem({
           </Text>
         </Stack>
         <Spacer size='x-small' />
-        {Icon ? <Icon color={iconContentColor} /> : null}
+        {icon ? React.cloneElement(icon, { color: iconContentColor }) : null}
       </Stack>
     </MenuOption>
   )
