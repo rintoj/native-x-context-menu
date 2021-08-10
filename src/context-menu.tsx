@@ -27,7 +27,7 @@ export function ContextMenu({
   const { getBackgroundColor, themeName } = useTheme()
   const isLightTheme = themeName === THEME.LIGHT
   const bgColor = backgroundColor ?? isLightTheme ? COLOR.PRIMARY : COLOR.DIVIDER
-  const containerStyle = getBackgroundColor(bgColor)
+  const containerStyle = getBackgroundColor?.(bgColor)
   const contextMenuItemProps: ContextMenuItemPropsExtended = {
     containerColors: {
       backgroundColor: bgColor,
